@@ -11,6 +11,7 @@ import { Skills } from './components/skills/skills';
 import { Projects } from './components/projects/projects';
 import { Experience } from './components/experience/experience';
 import { Contacts } from './components/contacts/contacts';
+import { Notfound } from './components/notfound/notfound';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Contacts } from './components/contacts/contacts';
     Skills,
     Projects,
     Experience,
-    Contacts
+    Contacts,
+    Notfound
   ],
   imports: [
     BrowserModule,
