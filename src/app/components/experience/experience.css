@@ -1,0 +1,117 @@
+.experience {
+  position: relative;
+  background: linear-gradient(to bottom, #020610 0%, #020610 60%, #2d0c3f 100%);
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+
+.experience::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://miro.medium.com/v2/resize:fit:1100/format:webp/1*u1Ol4tsi18H-dFfJIc4VWQ.jpeg") center/cover no-repeat;
+  opacity: 0.12; 
+  z-index: 0;
+}
+
+.experience__content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 1; 
+}
+
+
+.experience__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #60a5fa, #a855f7);
+  background-clip: text;
+  color: transparent;
+}
+
+
+.experience__card {
+  background: rgba(20, 20, 40, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid transparent;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+}
+
+.experience__card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border: 1px solid #a855f7;
+  box-shadow: 0 10px 40px rgba(168, 85, 247, 0.4);
+}
+
+
+.experience__date {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 0.4rem;
+}
+
+.experience__role {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e0e0ff;
+  margin-bottom: 0.6rem;
+}
+
+.experience__desc {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.experience__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience__tags span {
+  background: rgba(255, 0, 180, 0.15);
+  color: #ff5cd6;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.experience__tags span:hover {
+  background: rgba(255, 0, 180, 0.3);
+}
+
+
+.block {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.block.show {
+  animation: appear 0.8s ease forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
